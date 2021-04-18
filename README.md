@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+This my react project and responsive bootstrap used|
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+my recent project link:
+https://red-security-app.web.app/
 
-## Available Scripts
 
-In the project directory, you can run:
+my first route used project in react|
 
-### `npm start`
+In the  live project directory, you can visit:
+https://xenodochial-thompson-5e99a1.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+my old project live link you can visit.\
+https://festive-panini-3193d8.netlify.app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can learn more in the react project and any help my facebook acount./
+https://www.facebook.com/RKReza1992
 
-### `npm test`
+Multi-Vendors (Sellers dashboard)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.Click Become Seller on header menu
+2.Sign-in or Registr as seller
+3.Show seller dashboard including products and orders
+4.Manage products
+5.Manage orders
+6.Seller page as /seller/:sellerId
+7.Manage commissions and payouts
 
-### `npm run build`
+As a user, I can switch between product list so that I have not to see them in one page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open home page
+There is load more button at the end if items are more than 20
+click on load more button and it shows more 20 items until it is done.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add item to cart
+Proceed to checkout
+Sign-in or Register
+Enter Shipping data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Save user address in profile
 
-### `npm run eject`
+Add item to cart
+Proceed to checkout
+Sign-in or Register
+Enter Shipping data
+Address information will be loaded from user profile. if it does not exist, show empty form.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Send Email to customer
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As a user, I can get email from ecommerce website so that I notice of any change to my order or account.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Place an order
+Send email for order details
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click on profile
+Select order
+Click Refund button
+Enter reasons for refund
+Change state to pending for refund
+Admin view orders
+Add select order to refund
+Add Accept or Reject the refund
+User will be informed from the result.
