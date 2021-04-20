@@ -9,7 +9,7 @@ const ServiceOrderCard = ({ orderList, fetchServiceOrder }) => {
     const handleChangeStatus = (evt) => {
         const targetAction = evt.target.value;
         const id = evt.target.id;
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://redserviceguard.herokuapp.com/updateStatus/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ status: targetAction })
@@ -23,7 +23,7 @@ const ServiceOrderCard = ({ orderList, fetchServiceOrder }) => {
     }
 
     const OrderDelete = (serviceId) => {
-        fetch(`http://localhost:5000/serviceOrderDelete/${serviceId}`, {
+        fetch(`https://redserviceguard.herokuapp.com/serviceOrderDelete/${serviceId}`, {
             method: 'delete',
             headers: {
                 'Content-Type': 'application/json'

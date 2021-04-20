@@ -21,7 +21,7 @@ const AddOfficer = () => {
         formData.append('description', data.description);
         setLoading(true);
 
-        fetch('http://localhost:5000/addOfficer', {
+        fetch('https://redserviceguard.herokuapp.com/addOfficer', {
             method: 'POST',
             body: formData
         })

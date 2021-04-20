@@ -8,7 +8,7 @@ const ServiceOrder = () => {
     const [orderList, setOrderList] = useState([]);
 
     const fetchServiceOrder = () => {
-        fetch('http://localhost:5000/orderList')
+        fetch('https://redserviceguard.herokuapp.com/orderList')
             .then(res => res.json())
             .then((data) => {
                 setOrderList(data);

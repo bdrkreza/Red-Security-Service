@@ -22,7 +22,7 @@ const CreateAdmin = () => {
         formData.append('role', 1);
         setLoading(true);
 
-        fetch('http://localhost:5000/admins', {
+        fetch('https://redserviceguard.herokuapp.com/admins', {
             method: 'POST',
             body: formData
         })

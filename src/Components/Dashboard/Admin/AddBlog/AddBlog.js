@@ -21,7 +21,7 @@ const AddBlog = () => {
         formData.append('description', data.description);
         setLoading(true);
 
-        fetch('http://localhost:5000/addBlogs', {
+        fetch('https://redserviceguard.herokuapp.com/addBlogs', {
             method: 'POST',
             body: formData
         })

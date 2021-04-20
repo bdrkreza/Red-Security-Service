@@ -10,7 +10,7 @@ const Guard = () => {
     const [officers, setOfficers] = useState([]);
     console.log(officers)
     useEffect(() => {
-        fetch('http://localhost:5000/officer')
+        fetch('https://redserviceguard.herokuapp.com/officer')
             .then(res => res.json())
             .then((data) => {
                 setOfficers(data);

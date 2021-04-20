@@ -10,7 +10,7 @@ const BookingList = () => {
     const [loading, setLoading] = useState(null)
     const [orderList, setOrderList] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/serviceOrderList?email=' + loggedInUser.email)
+        fetch('https://redserviceguard.herokuapp.com/serviceOrderList?email=' + loggedInUser.email)
             .then(res => res.json())
             .then((data) => {
                 setOrderList(data);
