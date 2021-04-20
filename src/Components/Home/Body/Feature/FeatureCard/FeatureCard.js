@@ -5,14 +5,14 @@ const FeatureCard = ({ featureData }) => {
     const { name, icon, description } = featureData;
     return (
         <>
-            <div id="what-we-do" class="col-md-6 mb-2">
-                <div class="card">
-                    <div class="card-block block-1">
-                        <div class="d-flex">
-                            <img class="w-25 h-25 bg-info mr-4" src={icon} alt="" />
-                            <h5 class="card-title">{name}</h5>
+            <div id="what-we-do" className="col-md-6 mb-2">
+                <div className="card">
+                    <div className="card-block block-1">
+                        <div className="d-flex">
+                            <img className="w-25 h-25 bg-info mr-4" src={icon} alt="" />
+                            <h5 className="card-title">{name}</h5>
                         </div>
-                        <p class="card-text">{description}</p>
+                        <p className="card-text">{description}</p>
                     </div>
                 </div>
             </div>

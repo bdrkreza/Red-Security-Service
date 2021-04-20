@@ -4,10 +4,10 @@ my recent project link:
 https://red-security-app.web.app/
 
 
-my first route used project in react|
+my first mern project in react|
 
 In the  live project directory, you can visit:
-https://xenodochial-thompson-5e99a1.netlify.app/
+https://red-security-app.web.app/
 
 my old project live link you can visit.\
 https://festive-panini-3193d8.netlify.app
@@ -15,11 +15,11 @@ https://festive-panini-3193d8.netlify.app
 You can learn more in the react project and any help my facebook acount./
 https://www.facebook.com/RKReza1992
 
-Multi-Vendors (Sellers dashboard)
+user and admin ( dashboard)
 
 1.Click Become Seller on header menu
 2.Sign-in or Registr as seller
-3.Show seller dashboard including products and orders
+3.Show seller dashboard including service and orders
 4.Manage products
 5.Manage orders
 6.Seller page as /seller/:sellerId
@@ -31,10 +31,6 @@ Open home page
 There is load more button at the end if items are more than 20
 click on load more button and it shows more 20 items until it is done.
 
-Add item to cart
-Proceed to checkout
-Sign-in or Register
-Enter Shipping data
 
 Save user address in profile
 

@@ -17,17 +17,32 @@ const Testimonial = () => {
 
     return (
         <>
-            <div class="container-fluid card bg-dark p-0">
-                <div class="container p-0 py-5">
-                    <div class="d-flex flex-column text-center mb-5">
-                        <h5 class="text-primary mb-3">Testimonial</h5>
-                        <h1 class="m-0">What Our Clients Say</h1>
+            <div className="container-fluid card bg-dark p-0">
+                <div className="container p-0 py-5">
+                    <div className="d-flex flex-column text-center mb-5">
+                        <h5 className="text-primary mb-3">Testimonial</h5>
+                        <h1 className="m-0">What Our Clients Say</h1>
                     </div>
-                    <div class="owl-carousel testimonial-carousel row">
-                        {
-                            review.map(data => <TestimonialCard testimonialData={data} />)
-                        }
-                    </div>
+                    {
+                        loading ? <div className="owl-carousel testimonial-carousel row">
+                            {
+                                review.map(data => <TestimonialCard testimonialData={data} />)
+                            }
+                        </div> : <div>
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-secondary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-success" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-danger" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </>

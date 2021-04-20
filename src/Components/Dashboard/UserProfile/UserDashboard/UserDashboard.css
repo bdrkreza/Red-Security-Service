@@ -1,0 +1,29 @@
+.brand-logo{
+  width: 150px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.log-btn {background-image: linear-gradient(to right, #003973 0%, #E5E5BE  51%, #003973  100%)}
+.log-btn {
+            margin: 10px;
+            padding: 8px 35px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 5px #eee;
+            border-radius: 10px;
+            display: block;
+ }
+
+.log-btn:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+}

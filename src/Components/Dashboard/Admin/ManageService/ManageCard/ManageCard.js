@@ -19,7 +19,7 @@ const ManageCard = ({ manageData, fetchService }) => {
             .then(data => {
                 fetchService();
                 if (data) {
-                    alert('Product Delete successfully')
+                    alert('Service Delete successfully')
                 }
             })
     }
@@ -29,16 +29,16 @@ const ManageCard = ({ manageData, fetchService }) => {
             <tr>
                 <th scope="row">1</th>
                 <td>
-                    <img src={`data:image/png;base64,${image.img}`} alt="Avatar" class="avatar" />
+                    <img src={`data:image/png;base64,${image.img}`} alt="Avatar" className="avatar" />
                 </td>
                 <td>{name}</td>
                 <td>{price}</td>
                 <td>
-                    <div class="d-flex justify-content-around ">
-                        <p onClick={() => ServiceDelete(_id)} class="delete-icon">
+                    <div className="d-flex justify-content-around ">
+                        <p onClick={() => ServiceDelete(_id)} className="delete-icon">
                             <FontAwesomeIcon size="2x" icon={faTrash} />
                         </p>
-                        <Link to={`/editService/${_id}`} class="edit-icon">
+                        <Link to={`/editService/${_id}`} className="edit-icon">
                             <FontAwesomeIcon size="2x" icon={faEdit} />
                         </Link>
                     </div>

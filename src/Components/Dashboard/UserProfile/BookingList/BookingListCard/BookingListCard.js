@@ -5,16 +5,16 @@ const BookingListCard = ({ orderList }) => {
     console.log(orderList)
     return (
         <>
-            <tr className="bg-info">
+            <tr classNameName="bg-info">
                 <th scope="row">1</th>
                 <td>
-                    <img src={`data:image/png;base64,${image?.img}`} alt="Avatar" class="avatar" />
+                    <img src={`data:image/png;base64,${image?.img}`} alt="Avatar" className="avatar" />
                 </td>
-                <td>{name}</td>
+                <td className="text-success">{name}</td>
 
-                <td>{price}</td>
+                <td className="text-dark">${price}</td>
 
-                <td>{orderList.status}</td>
+                <td className="text-warning">{orderList.status}</td>
             </tr>
         </>
     );

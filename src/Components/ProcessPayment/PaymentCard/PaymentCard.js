@@ -7,9 +7,11 @@ const PaymentCard = ({ handlePaymentSuccess }) => {
     const elements = useElements();
     const [PaymentError, setPaymentError] = useState(null)
     const [PaymentSuccess, setPaymentSuccess] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true)
 
         if (!stripe || !elements) {
 
@@ -20,6 +22,7 @@ const PaymentCard = ({ handlePaymentSuccess }) => {
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card: cardElement,
+
         });
 
         if (error) {
@@ -29,7 +32,7 @@ const PaymentCard = ({ handlePaymentSuccess }) => {
             setPaymentSuccess(paymentMethod.id);
             setPaymentError(null)
             handlePaymentSuccess(paymentMethod.id)
-
+            setLoading(false)
         }
     };
 
@@ -37,17 +40,22 @@ const PaymentCard = ({ handlePaymentSuccess }) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <CardElement />
-                <button type="submit" disabled={!stripe}>
-                    Pay
+                <button type="submit" className="btn w-50  btn-danger" disabled={!stripe}>
+                    {loading && (
+                        <div class="spinner-border spinner-border-sm" role="status">
+                        </div>
+                    )}
+                    {loading && <span className="ml-1">Payment Processing..</span>}
+                    {!loading && <span>Pay</span>}
                 </button>
             </form>
 
             {
-                PaymentError && <p class="text-danger">{PaymentError}</p>
+                PaymentError && <p className="text-danger">{PaymentError}</p>
             }
 
             {
-                PaymentSuccess && <p class="text-success">Your payment was successful</p>
+                PaymentSuccess && <p className="text-success">Your payment was successful</p>
             }
         </div>
     );

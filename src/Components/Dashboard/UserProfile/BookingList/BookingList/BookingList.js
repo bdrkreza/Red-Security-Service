@@ -6,11 +6,11 @@ import BookingListCard from '../BookingListCard/BookingListCard';
 import { UserContext } from '../../../../../App';
 
 const BookingList = () => {
-    const [LoggedInUser,] = useContext(UserContext);
+    const [loggedInUser,] = useContext(UserContext);
     const [loading, setLoading] = useState(null)
     const [orderList, setOrderList] = useState([]);
     useEffect(() => {
-        fetch('https://redserviceguard.herokuapp.com/serviceOrderList?email=' + LoggedInUser.email)
+        fetch('http://localhost:5000/serviceOrderList?email=' + loggedInUser.email)
             .then(res => res.json())
             .then((data) => {
                 setOrderList(data);
@@ -20,10 +20,10 @@ const BookingList = () => {
     }, [])
 
     return (
-        <div class="container card bg-secondary mt-5">
+        <div className="container card bg-primary mt-5">
             <h2 className='text-center'>Booking List</h2>
-            <table class="table table-striped table-hover">
-                <thead class="thead-dark w-100">
+            <table className="table table-striped table-hover">
+                <thead className="thead-dark w-100">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Image</th>
@@ -32,11 +32,25 @@ const BookingList = () => {
                         <th scope="col">Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {
-                        orderList.map(data => <BookingListCard orderList={data} />)
-                    }
-                </tbody>
+                {
+                    loading ? <tbody>
+                        {
+                            orderList?.map(data => <BookingListCard orderList={data} />)
+                        }
+                    </tbody> :
+                        <div className=" text-center d-flex justify-content-around">
+                            <div class=" spinner-grow text-success" role="status">
+                            </div>
+                            <div class="spinner-grow text-danger" role="status">
+                            </div>
+                            <div class="spinner-grow text-warning" role="status">
+                            </div>
+                            <div class="spinner-grow text-info" role="status">
+                            </div>
+                        </div>
+
+                }
+
             </table>
 
 

@@ -5,15 +5,15 @@ const HeaderCard = ({ data }) => {
     console.log(data)
     const { icon, description, title } = data;
     return (
-        <div class="card-container container">
-            <div class="card card-style">
+        <div className=" col-lg-4 col-md-6 col-sm-12 card-container">
+            <div className="card card-style">
                 <h2>{title}</h2>
-                <div class="circle"></div>
-                <div class="row d-flex">
-                    <div class="content col-md-4">
-                        <img class="card-logo ml-4" src={icon} alt="" />
+                <div className="circle"></div>
+                <div className="row d-flex">
+                    <div className="content col-md-4 col-sm-4">
+                        <img className="card-logo ml-4" src={icon} alt="" />
                     </div>
-                    <div class="col-md-8">
+                    <div className="col">
                         <p>{description}</p>
                     </div>
                 </div>

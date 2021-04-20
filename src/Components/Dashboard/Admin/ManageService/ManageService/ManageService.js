@@ -21,8 +21,8 @@ const ManageService = () => {
     }, [])
 
     return (
-        <div class="container mt-5">
-            <table class="table table-dark">
+        <div className="container mt-5">
+            <table className="table table-dark">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -32,12 +32,27 @@ const ManageService = () => {
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
 
-                    {
-                        service.map(data => <ManageCard manageData={data} fetchService={fetchService} />)
-                    }
-                </tbody>
+                {
+                    loading ?
+                        <tbody>
+                            {
+                                service.map(data => <ManageCard manageData={data} fetchService={fetchService} />)
+                            }
+                        </tbody>
+                        :
+                        <div className="d-flex justify-content-around">
+                            <div class="spinner-grow text-success" role="status">
+                            </div>
+                            <div class="spinner-grow text-danger" role="status">
+                            </div>
+                            <div class="spinner-grow text-warning" role="status">
+                            </div>
+                            <div class="spinner-grow text-info" role="status">
+                            </div>
+                        </div>
+                }
+
             </table>
         </div>
     );

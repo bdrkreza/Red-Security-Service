@@ -1,9 +1,13 @@
 
 .get-in-touch {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0px auto;
     position: relative;
   
+  }
+
+  .crete-form{
+    margin-top: 110px;
   }
   .get-in-touch .title {
     text-align: center;

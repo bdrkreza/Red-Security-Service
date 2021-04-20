@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./OurService.css"
 import ServiceCard from '../ServiceCard/ServiceCard';
 
+
 const OurService = () => {
 
     const [loading, setLoading] = useState(null)
@@ -13,23 +14,42 @@ const OurService = () => {
                 setService(data);
                 setLoading(data);
             })
-
     }, [])
 
     return (
 
-        <div class="container pt-5">
-            <div class="d-flex flex-column text-center mb-5">
-                <h5 class="text-primary mb-3">Our Services</h5>
-                <h1 class="m-0">Premium Security Services</h1>
+        <div className="container pt-5">
+            <div className="d-flex flex-column text-center mb-5">
+                <h5 className="text-primary mb-3">Our Services</h5>
+                <h1 className="m-0">Premium Security Services</h1>
             </div>
-            <div class="row d-flex">
-                {
-                    service.map(data => <ServiceCard serviceData={data} />)
-                }
 
-            </div>
-        </div>
+            {loading ?
+                <div className="row d-flex">
+                    {
+                        service.map(data => <ServiceCard serviceData={data} />)
+                    }
+                </div>
+                :
+                <div class="text-center">
+                    <div class="spinner-grow text-primary" role="status">
+
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+
+                    </div>
+                </div>
+            }
+
+
+
+        </div >
     );
 };
 

@@ -8,23 +8,24 @@ const style = {
 };
 
 const BlogCard = ({ blogData }) => {
-    const { img, description, name } = blogData;
+    const { name, description, admin } = blogData.blog;
+    console.log(blogData)
     return (
         <>
-            <div class="col-lg-4 mb-4">
-                <div class="card mb-2">
-                    <img class="card-img-top" src={img} alt="" />
-                    <div class="card-body bg-dark d-flex align-items-center p-1">
-                        <h6 class="card-title text-white text-truncate m-0 ml-3">{name}</h6>
-                        <a href="/" style={style} class="d-flex flex-shrink-0 align-items-center justify-content-center bg-danger text-white text-decoration-none m-0 ml-auto" ><FontAwesomeIcon size="2x" icon={faLink} /></a>
+            <div className="col-lg-4 mb-4">
+                <div className="card mb-2">
+                    <img className="card-img-top" src={`data:image/png;base64,${blogData.image?.img}`} alt="" />
+                    <div className="card-body bg-dark d-flex align-items-center p-1">
+                        <h6 className="card-title text-white text-truncate m-0 ml-3">{name}</h6>
+                        <a href="/" style={style} className="d-flex flex-shrink-0 align-items-center justify-content-center bg-danger text-white text-decoration-none m-0 ml-auto" ><FontAwesomeIcon size="2x" icon={faLink} /></a>
                     </div>
-                    <div class="card-footer py-3 px-4">
-                        <div class="d-flex mb-2">
-                            <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                            <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                            <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                    <div className="card-footer py-3 px-4">
+                        <div className="d-flex mb-2">
+                            <small className="mr-3"><i className="fa fa-user text-primary"></i>{admin}</small>
+                            <small className="mr-3"><i className="fa fa-folder text-primary"></i> Web Design</small>
+                            <small className="mr-3"><i className="fa fa-comments text-primary"></i> 15</small>
                         </div>
-                        <p class="m-0">{description}</p>
+                        <p className="m-0">{description}</p>
                     </div>
                 </div>
             </div>
